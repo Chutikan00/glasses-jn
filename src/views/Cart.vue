@@ -16,7 +16,6 @@
                 <p class="ml-10 mt-10 ">Name : {{ items.name }} </p>
                 <p class="ml-10 ">Price : {{ items.price }}</p>
                 <p class="ml-10 ">Each : {{ items.each }}</p>
-                <p class="ml-10 ">Stock: {{ items.stock }}</p>
               </v-col>
       
               
@@ -46,7 +45,7 @@
           </v-col>
           <v-col cols="12" class="mt-10">
             <div class="text-center">
-    <v-btn flat rounded="pill"  size="small" color="orange" @click="store.deleteCart(index)">
+    <v-btn flat rounded="pill"  size="small" color="orange" @click="checkBill()">
       Checkout
 
       <v-dialog
@@ -84,6 +83,11 @@ export default {
     const total = ref(0);
     const abc = 0;
 
+    const checkBill = () => {
+      store.checkout()
+      store.deleteallCart()
+    }
+
     const test = computed(() => {
       total.value = 0;
         store.cart.forEach((each) => {
@@ -95,7 +99,7 @@ export default {
 
     const sum = computed(() => total);
     
-    return {serviceCharge,sum,store,total,test};
+    return {serviceCharge,sum,store,total,test,checkBill};
 
   },
   

@@ -36,7 +36,6 @@ const filterByname = () =>{
         <v-text-field
             label="Type..."
             variant="underlined"
-            prepend-inner-icon="mdi-magnify"
             v-on:keyup="filterByname()" v-model="msg"
           ></v-text-field>
     </v-col>
@@ -59,9 +58,12 @@ const filterByname = () =>{
        </v-row>
       
       <v-row no-gutters class="mb-5 d-flex justify-center align-center">
-      <v-btn @click="store.addCart(item)" flat rounded="pill" size="small" color="orange">Add to cart</v-btn>
+      <v-btn @click="addedCart(item)" flat rounded="pill" size="small" color="orange">Add to cart</v-btn>
       </v-row>
 
       </v-col>
     </v-row>
+  <div v-for="item in showProducts" :key="item">
+    {{item.name}}
+  </div>
 </template>

@@ -1,11 +1,11 @@
 <template>
   <v-container fluid class="pa-0">
-    <v-row no-gutters class="bg-amber-100">
+    <v-row no-gutters class="bg-slate-200 font-bold ">
       <v-col cols="10" class="" width g-flex g-center>
         <v-row no-gutters class="h-full text-lg font-medium font-serif">
 
-          <v-col cols="6" class=" mt-4 mr-10 text-right ">
-            <router-link to="/">ABOUT US</router-link>
+          <v-col cols="6" class=" mt-4 mr-10 text-right text-neutral-900 hover:text-blue-500 ">
+            <router-link to="/about">ABOUT US</router-link>
           </v-col>
 
           <v-col cols="1" class="" >
@@ -16,7 +16,7 @@
           </v-col>
           
 
-          <v-col cols="2" class=" ml-10 mt-4 text-left">
+          <v-col cols="2" class=" ml-10 mt-4 text-left text-neutral-900 hover:text-blue-500">
             <router-link to="/product">SHOP NOW</router-link>
           </v-col>
         </v-row>
