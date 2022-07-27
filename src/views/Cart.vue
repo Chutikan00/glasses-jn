@@ -9,24 +9,33 @@
             :key="items.name"
             cols="12"
           >
-            <v-row no-gutters class="mt-10 ">
-              <v-col cols="2"><v-img :src="items.img" height="200"></v-img></v-col>
-              
-              <v-col cols="9" class="">
-                <p class="ml-10 mt-10 ">Name : {{ items.name }} </p>
-                <p class="ml-10 ">Price : {{ items.price }}</p>
-                <p class="ml-10 ">Each : {{ items.each }}</p>
-              </v-col>
-      
-              
-                <v-btn
-                  class="mb-10"
-                  @click="store.deleteCart(index)"
-                  flat rounded="pill"  size="small" color="red" style="float:right;"
-                  >X</v-btn
-                >
-             
-            </v-row>
+          <v-card
+            class="mx-auto mt-10 pa-0"
+            max-width=""
+            outlined
+            shaped >
+            <v-card-actions style="float:right;" class="pa-0">
+              <v-btn
+                @click="store.deleteCart(index)"
+                rounded="pill"  size="small" color="red" >X</v-btn>
+            </v-card-actions >
+            <v-list-item three-line >
+              <v-list-item-avatar
+                tile
+                size="150"
+                color="#E3F2FD"
+              ><v-img :src="items.img" height="120"></v-img></v-list-item-avatar>
+            <v-list-item-content class="mt-5">
+              <v-list-item-title class="text-lg mb-1 ml-5">
+                {{ items.name }}
+              </v-list-item-title>
+              <v-list-item-subtitle class="ml-5">
+                 <p class="mt-3 text-base" >Price : {{ items.price }}</p>
+                <p class="mt-1 text-base">Each : {{ items.each }}</p>
+              </v-list-item-subtitle>
+            </v-list-item-content>
+            </v-list-item>
+          </v-card>
           </v-col>
         </v-row>
       </v-col>

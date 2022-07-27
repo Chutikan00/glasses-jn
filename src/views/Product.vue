@@ -43,12 +43,14 @@ const filterByname = () =>{
     </v-row>
     <v-row  no-gutters class="ml-5 mt-10">
       <v-col cols="4" class=""
-      v-for="(item,index) in showProducts"
-      :key ="item.name" >
-      <v-img :src="item.img"  height="150"></v-img>
-      <p class=" mt-5 text-center text-xl font-serif">{{item.name}}</p>
-      <p class="text-center text-l font-serif">stock : <span class="font-mono">{{item.stock}}</span></p>
-      <p class="text-center text-xl font-serif">price : <span class="font-mono">{{item.price}}</span></p>
+        v-for="(item,index) in showProducts"
+        :key ="item.name" >
+        <v-card max-width="350" height="400" outlined shaped class="mx-auto mt-5"
+        color="#FAFAFA">
+        <v-img :src="item.img"  height="150" class="mt-3"></v-img>
+        <p class=" mt-5 text-center text-lg font-serif">{{item.name}}</p>
+      <p class="text-center text-base font-serif">stock : <span class="font-mono">{{item.stock}}</span></p>
+      <p class="text-center text-lg font-serif">price : <span class="font-mono">{{item.price}}</span></p>
 
        <v-row no-gutters class="d-flex justify-center align-center">
         <v-btn @click="store.decreaseCount(index)" 
@@ -59,9 +61,13 @@ const filterByname = () =>{
        </v-row>
       
       <v-row no-gutters class="mb-5 d-flex justify-center align-center">
-      <v-btn @click="store.addCart(item)" flat rounded="pill" size="small" color="orange">Add to cart</v-btn>
+      <v-btn @click="store.addCart(item,index)" flat rounded="pill" size="small" color="orange">Add to cart</v-btn>
       </v-row>
+      </v-card>
+      
 
       </v-col>
+    
+     
     </v-row>
 </template>

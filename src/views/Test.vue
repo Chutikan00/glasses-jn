@@ -40,6 +40,9 @@ const filterByname = () =>{
           ></v-text-field>
     </v-col>
     </v-row>
+    <v-row>
+      
+    </v-row>
     <v-row  no-gutters class="ml-5 mt-10">
       <v-col cols="4" class=""
       v-for="(item,index) in showProducts"
@@ -63,7 +66,6 @@ const filterByname = () =>{
 
       </v-col>
     </v-row>
-  <div v-for="item in showProducts" :key="item">
-    {{item.name}}
-  </div>
+
+  
 </template>

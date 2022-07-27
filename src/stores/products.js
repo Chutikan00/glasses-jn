@@ -106,8 +106,19 @@ export const useProductStore = defineStore({
     pushData(param) {
       this.products.push(param);
     },
-    addCart(data) {
-      this.cart.push(data);
+    addCart(data, index) {
+      //this.cart.push(data);
+      const find = this.cart.find((each, index) => {
+        if (index == index) return each
+      })
+      if (find) {
+        find.each += data.each
+        //this.cart.push(data);
+
+      } else {
+        this.cart.push(data);
+      }
+
     },
     deleteCart(index) {
       this.cart.splice(index, 1);
