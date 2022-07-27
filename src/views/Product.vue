@@ -53,10 +53,10 @@ const filterByname = () =>{
       <p class="text-center text-lg font-serif">price : <span class="font-mono">{{item.price}}</span></p>
 
        <v-row no-gutters class="d-flex justify-center align-center">
-        <v-btn @click="store.decreaseCount(index)" 
+        <v-btn @click="store.decreaseCount(index)" :disabled="item.stock==0" 
         flat rounded="pill" size="small" class="text-2xl"> - </v-btn>
         <span class="pa-3 font-mono"> {{item.each}} </span>
-        <v-btn @click="store.increaseCount(index)" 
+        <v-btn @click="store.increaseCount(index)" :disabled="item.stock==0"
         flat rounded="pill" size="small" class="text-2xl"> + </v-btn>
        </v-row>
       
