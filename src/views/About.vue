@@ -11,7 +11,7 @@
            
         </v-col>
         <v-col cols="3">
-          <v-img class="pa-0" src="src/assets/tiger.png"></v-img>
+          <v-img class="pa-0" src="https://cdn.discordapp.com/attachments/983216589891596318/1001712348693811252/tiger.png"></v-img>
         </v-col>
     </v-row>
     <v-row class="mt-10">

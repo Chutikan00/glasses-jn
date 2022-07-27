@@ -61,7 +61,7 @@ const filterByname = () =>{
        </v-row>
       
       <v-row no-gutters class="mb-5 d-flex justify-center align-center">
-      <v-btn @click="store.addCart(item,index)" flat rounded="pill" size="small" color="orange">Add to cart</v-btn>
+      <v-btn @click="store.addCart(item,index)" :disabled="item.stock==0" rounded="pill" size="small" color="orange">Add to cart</v-btn>
       </v-row>
       </v-card>
       

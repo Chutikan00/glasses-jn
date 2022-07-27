@@ -53,7 +53,7 @@
         Fortified cereal with 8 essential vitamins and minerals, no cholesterol and 0 grams of fat, they're gr-r-reat!</p>
       </v-col>
     <v-col cols="5" class="ml-10 rounded-md pa-0 ">
-      <v-img height="400" src="src/assets/tiger.png">
+      <v-img height="400" src="https://cdn.discordapp.com/attachments/983216589891596318/1001712348693811252/tiger.png">
       </v-img>
     </v-col> 
   </v-row>

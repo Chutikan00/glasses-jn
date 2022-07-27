@@ -10,7 +10,7 @@
 
           <v-col cols="1" class="" >
             <router-link to="/">
-              <v-img :aspect-ratio="aspectRatio" :width="100" src="src/assets/logo.png" >
+              <v-img :aspect-ratio="aspectRatio" :width="100" src="https://cdn.discordapp.com/attachments/963461589934166056/1001711798132678676/logo.png" >
               </v-img>
             </router-link>
           </v-col>
@@ -24,7 +24,7 @@
 
       <v-col cols="1" class="mt-4">
             <router-link to="/cart"> 
-              <v-img :width="24" src="src/assets/Cart_uni.png" class="ml-5"> </v-img>
+              <v-img :width="24" src="https://cdn.icon-icons.com/icons2/2715/PNG/512/shopping_cart_icon_172223.png" class="ml-5"> </v-img>
             </router-link>
             <v-row class=" text-sm ml-7"> <span class="ml-4 font-mono ">{{ cartLength }} </span>  </v-row>
             

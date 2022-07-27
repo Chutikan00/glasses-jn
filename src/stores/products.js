@@ -20,7 +20,7 @@ export const useProductStore = defineStore({
         img: 'https://images.kglobalservices.com/www.kelloggs.com/en_us/product/product_5096612/prod_img-5124879_marshmallow-frosted-flakes.png',
         name: 'Frosted Flakes cereal with Marshmallows',
         price: 150,
-        stock: 15,
+        stock: 0,
         each: 1,
       },
       {
@@ -91,7 +91,7 @@ export const useProductStore = defineStore({
         img: 'https://images.kglobalservices.com/www.kelloggs.com/en_us/product/product_9227839/prod_img-11170734_cerealbars_00038000243783_c1l1.png',
         name: 'Froot Loops Cereal Bars',
         price: 230,
-        stock: 7,
+        stock: 8,
         each: 1,
       },
 
@@ -109,7 +109,7 @@ export const useProductStore = defineStore({
     addCart(data, index) {
       //this.cart.push(data);
       const find = this.cart.find((each, index) => {
-        if (index == index) return each
+        if (each.name == index) return each
       })
       if (find) {
         find.each += data.each
@@ -144,8 +144,6 @@ export const useProductStore = defineStore({
     },
     updateByEdit(item) {
       const find = this.products.find((each, index) => {
-        console.log(index)
-        console.log(item.index)
 
         if (index == item.index.value) return each
       })
