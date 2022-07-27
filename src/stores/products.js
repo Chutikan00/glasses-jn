@@ -109,7 +109,7 @@ export const useProductStore = defineStore({
     addCart(data, index) {
       //this.cart.push(data);
       const find = this.cart.find((each, index) => {
-        if (each.name == index) return each
+        if (data.name == each.name) return each
       })
       if (find) {
         find.each += data.each
